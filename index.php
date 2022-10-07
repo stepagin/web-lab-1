@@ -6,7 +6,7 @@ require("https://se.ifmo.ru/~s335060/web-lab-1/components/functions.php");
 <head>
     <meta charset="UTF-8">
     <title>First web lab</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://se.ifmo.ru/~s335060/web-lab-1/css/stylesheet.css">
     <script type="text/javascript" src="https://se.ifmo.ru/~s335060/web-lab-1/js/libraries/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://se.ifmo.ru/~s335060/web-lab-1/js/script.js" defer></script>
 <!--    <script type="text/javascript" src="js/test.js" defer></script>-->
