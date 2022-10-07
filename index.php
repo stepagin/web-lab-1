@@ -1,5 +1,5 @@
 <?php
-require("components/functions.php");
+require("se.ifmo.ru/~s335060/public_html/web-lab-1/components/functions.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +7,8 @@ require("components/functions.php");
     <meta charset="UTF-8">
     <title>First web lab</title>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <script type="text/javascript" src="js/libraries/jquery-3.6.1.min.js"></script>
-    <script type="text/javascript" src="js/script.js" defer></script>
+    <script type="text/javascript" src="se.ifmo.ru/~s335060/public_html/web-lab-1/js/libraries/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="se.ifmo.ru/~s335060/public_html/web-lab-1/js/script.js" defer></script>
 <!--    <script type="text/javascript" src="js/test.js" defer></script>-->
     <!--    шрифт-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
