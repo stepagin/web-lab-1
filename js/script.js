@@ -58,8 +58,8 @@ window.onload = function () {
             return;
         }
         document.getElementById("y_label").style.color = "black";
-        // get_request( "https://se.ifmo.ru/~s335060/web-lab-1/components/make_result.php", `{"x_param": ${x}, "y_param": ${y}, "r_param": ${r}}`, (result) => {
-        get_request( "../components/make_result.php", `{"x_param": ${x}, "y_param": ${y}, "r_param": ${r}}`, (result) => {
+        get_request( "https://se.ifmo.ru/~s335060/web-lab-1/components/make_result.php", `{"x_param": ${x}, "y_param": ${y}, "r_param": ${r}}`, (result) => {
+        // get_request( "../components/make_result.php", `{"x_param": ${x}, "y_param": ${y}, "r_param": ${r}}`, (result) => {
             tm.addRow(new Date().toLocaleString(), x, y, r, result);
             document.getElementById("result").innerHTML = "Результат: " + result;
         });
