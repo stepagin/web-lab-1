@@ -33,8 +33,8 @@ require("components/functions.php");
         </div>
 
         <div class="result_wrapper">
-<!--            <p id="result">результат: --><?php //echo (hit_result()) ?><!--.</p>-->
-            <p id="result">результат: no.</p>
+<!--            <p id="result">результат: --><?php //echo (hit_result()); ?><!--.</p>-->
+            <p class="result_label" id="result"></p>
         </div>
 
         <div class="form_wrapper">
@@ -58,7 +58,7 @@ require("components/functions.php");
 
                 <div class="input_wrapper">
                     <label for="y_input" id="y_label"> Y:</label>
-                    <input id="y_input" required type="text" name="y_param" placeholder="{-5...5}">
+                    <input id="y_input" required maxlength="6" type="text" name="y_param" placeholder="(-5...5)">
                 </div>
 
                 <div class="input_wrapper">

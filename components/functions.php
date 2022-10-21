@@ -38,7 +38,7 @@ function hit_result(): string
         if ($x_param <= 0) {// левая сторона графика
 
             if ($y_param >= 0) {// четвёртая четверть
-                 if ($y_param <= $r_param and $x_param <= $r_param) {
+                 if ($y_param <= $r_param and -$x_param <= $r_param) {
                      return "HIT";
                  } else {
                      return "MISS";

@@ -9,16 +9,17 @@ class TableModifier {
 
     addRow(...cols) {
         let row = document.createElement("tr");
-        for(let i=0;i<cols.length&&i<this.columns;i++) {
+        for(let i = 0; i < cols.length && i < this.columns; i++) {
             let col = document.createElement("td")
             col.appendChild(document.createTextNode(cols[i]));
             row.appendChild(col);
         }
+
         this.table.appendChild(row);
     }
 
     setContent(html) {
-        console.log("function SetContent")
+        // console.log("function SetContent")
         this.table.innerHTML += html;
     }
 
@@ -41,7 +42,7 @@ window.onload = function () {
     const tm = new TableModifier("history", 5)
     const get_input_data = () => { // функция для получения данных из формы
         let formData = new FormData(form);
-        console.log("funstion get_input_data");
+        // console.log("funstion get_input_data");
         return {
             X: formData.get("x_param"),
             Y: formData.get("y_param").replace(",", "."),
@@ -50,17 +51,18 @@ window.onload = function () {
     }
 
     function submit(){
-        console.log("function submit");
+        // console.log("function submit");
         const {X: x, Y: y, R: r} = get_input_data();
         if(!y||isNaN(y)||y<-3||y>5) {
             document.getElementById("y_label").style.color = "red";
             return;
         }
         document.getElementById("y_label").style.color = "black";
-        get_request( "https://se.ifmo.ru/~s335060/web-lab-1/components/make_result.php", `{"x_param": ${x}, "y_param": ${y}, "r_param": ${r}}`, (result) => {
-            tm.addRow(new Date(), x, y, r, result);
+        // get_request( "https://se.ifmo.ru/~s335060/web-lab-1/components/make_result.php", `{"x_param": ${x}, "y_param": ${y}, "r_param": ${r}}`, (result) => {
+        get_request( "../components/make_result.php", `{"x_param": ${x}, "y_param": ${y}, "r_param": ${r}}`, (result) => {
+            tm.addRow(new Date().toLocaleString(), x, y, r, result);
+            document.getElementById("result").innerHTML = "Результат: " + result;
         });
-        document.getElementById("result").innerHTML = "результат: ";
 
     }
 
