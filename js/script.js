@@ -53,7 +53,7 @@ window.onload = function () {
     function submit(){
         // console.log("function submit");
         const {X: x, Y: y, R: r} = get_input_data();
-        if(!y||isNaN(y)||y<-3||y>5) {
+        if(!y||isNaN(y)||y<=-5||y>=5) {
             document.getElementById("y_label").style.color = "red";
             return;
         }

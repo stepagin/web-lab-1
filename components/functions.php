@@ -24,6 +24,10 @@ function get_option($name){
 
 function hit_result(): string
 {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        http_response_code(403);
+        return "undefned";
+    }
 
     $x_param = get_option("x_param");
     $y_param = get_option("y_param");
